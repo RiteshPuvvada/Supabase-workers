@@ -1,14 +1,14 @@
-# supabase-workers-proxy
+# supabase-workers 👷
 
 This codebase is a proof-of-concept for making API requests to [Supabase](https://supabase.com) inside of a [Cloudflare Workers](https://workers.cloudflare.com) serverless function.
 
 Supabase's [JavaScript client](https://github.com/supabase/supabase-js) doesn't work directly in Workers without using Webpack's `externals` feature to replace `cross-fetch` with the native `fetch` API in Workers, as seen [here](https://github.com/signalnerve/supabase-workers-proxy/blob/main/webpack.config.js).
 
-You can see an example of this API at `supabase-workers-proxy.signalnerve.workers.dev`:
+You can see an example of this API at `https://supabase-workers.riteshpuvvada.workers.dev`:
 
-- `supabase-workers-proxy.signalnerve.workers.dev/users`: select all users
-- `supabase-workers-proxy.signalnerve.workers.dev/users/:id`: query for a user by id
-- `supabase-workers-proxy.signalnerve.workers.dev/*`: all other requests are redirected to this GitHub project
+- `https://supabase-workers.riteshpuvvada.workers.dev/users`: select all users
+- `https://supabase-workers.riteshpuvvada.workers.dev/users/:id`: query for a user by id
+- `https://supabase-workers.riteshpuvvada.workers.dev/*`: all other requests are redirected to this GitHub project
 
 To deploy your own version, clone or fork the project, replace the `account_id` value in `wrangler.toml` with your own, and then set two secrets using `wrangler secret put`:
 

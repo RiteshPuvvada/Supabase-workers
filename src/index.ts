@@ -39,7 +39,7 @@ router.get('/users/:id', withParams, async (
   return user ? json(user) : missing("No user found")
 })
 
-router.all('*', () => Response.redirect("https://github.com/RiteshPuvvada/Supabase-workers"))
+router.all('*', () => Response.redirect("https://github.com/RiteshPuvvada/Supabase-workers.git"))
 
 addEventListener("fetch", event => {
   event.respondWith(router.handle(event.request))
