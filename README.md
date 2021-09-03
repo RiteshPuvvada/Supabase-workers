@@ -16,5 +16,3 @@ To deploy your own version, clone or fork the project, replace the `account_id` 
 - `SUPABASE_URL`: RESTful endpoint URL available in your Supabase project's "API settings"
 
 This project is built on TypeScript using [`itty-router`](https://itty-router.dev) and could easily be extended to provide a RESTful interface to your Supabase data, without needing to expose any API credentials.
-
-Note that support for more advanced features, such as proxying authenticated requests, realtime data, and the rest of the Supabase suite are not currently tested or supported. (would be cool tho - open a ticket!)
